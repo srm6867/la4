@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <style>
+            body {background-color: rgb(165, 221, 221);
+                    text-align:center;}
+            h1   {color: rgb(255, 94, 0);
+                text-align:center;}
+            p    {color: red;
+                text-align:center;}
+            </style>
+    </head>
+    <body>
+        <h1><b>Course Store </b></h1>
+        <% for(let i = 0; i < posts.length; i++) { %>
+            <article>
+                <p><a href="https://www.simplilearn.com/java-full-stack-developer-certification-training-course?&utm_source=google&utm_medium=cpc&utm_term=%2Bjava%20%2Bcourse&utm_content=949673033-95299790303-420728905879&utm_device=c&utm_campaign=Search-TechCluster-SD-MSD-IN-Main-AllDevice-adgroup-Java-Course&gclid=CjwKCAjw_JuGBhBkEiwA1xmbRdIOt5FejMUMYT5xII6GshnnYpSCMPWaZIfk3HxnIIuy4hEdqn-opRoC2rYQAvD_BwE"><%= posts[i].body %></a></p>
+            </article>
+        <% } %>
+        <form action="addpost" method="POST">
+            <textarea name="body"></textarea>
+            <input type="submit" value="Add Course" />
+        </form>
+    </body>
+</html>
